@@ -5,7 +5,7 @@ import classNames from "classnames";
 export default function DayListItem(props) {
   const formatSpots = function (spotsNumber) {
     if (spotsNumber === 0) return "No Spots ";
-    if (spotsNumber === 1) return "Spot ";
+    if (spotsNumber === 1) return "1 Spot ";
     if (spotsNumber > 1) return `${spotsNumber} Spots `;
   };
 

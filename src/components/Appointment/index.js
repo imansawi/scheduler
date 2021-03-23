@@ -35,7 +35,7 @@ export default function Appointment(props) {
       .catch((error) => transition(ERROR_SAVE, true));
   }
 
-  function deleteAppt() {
+  function destroy() {
     transition(DELETING, true);
     props.cancelInterview(props.id)
       .then(() => transition(EMPTY))
@@ -53,7 +53,7 @@ export default function Appointment(props) {
   }, [props.interview, transition, mode]);
 
   return (
-    <article apptId="appointment" className="appointment">
+    <article appointId="appointment" className="appointment">
       <Header time={props.time} />
       {mode === EMPTY && <Empty onAdd={() => transition(CREATE)} />}
       {mode === SHOW && props.interview && (
@@ -75,9 +75,9 @@ export default function Appointment(props) {
       {mode === DELETING && <Status message="Deleting..." />}
       {mode === CONFIRM && (
         <Confirm
-          message="Delete the appointment?"
+          message="Delete This Appointment??"
           onCancel={() => back()}
-          onConfirm={deleteAppt}
+          onConfirm={destroy}
         />
       )}
       {mode === EDIT && (
@@ -90,10 +90,10 @@ export default function Appointment(props) {
         />
       )}
       {mode === ERROR_DELETE && (
-        <Error message="Could not delete appointment." onClose={() => back()} />
+        <Error message="Could Not Delete This Appointment!!" onClose={() => back()} />
       )}
       {mode === ERROR_SAVE && (
-        <Error message="Could not save appointment." onClose={() => back()} />
+        <Error message="Could Not Save This Appointment!!" onClose={() => back()} />
       )}
     </article>
   );

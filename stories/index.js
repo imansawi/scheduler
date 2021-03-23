@@ -1,19 +1,15 @@
 import React, { useState } from "react";
 import { Fragment } from "react";
-
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
-
 import "index.scss";
+import "components/Appointment/styles.scss";
 
 import Button from "components/Button";
 import DayListItem from "components/DayListItem";
 import DayList from "components/DayList";
 import InterviewerListItem from "components/InterviewerListItem";
 import InterviewerList from "components/InterviewerList";
-
-//import "components/Appointment/styles.scss";
-
 import Appointment from "components/Appointment/index";
 import Header from "components/Appointment/Header";
 import Empty from "components/Appointment/Empty";
@@ -22,7 +18,6 @@ import Form from "components/Appointment/Form";
 import Status from "components/Appointment/Status";
 import Confirm from "components/Appointment/Confirm";
 import Error from "components/Appointment/Error";
-import "components/Appointment/styles.scss";
 
 const days = [
   {
@@ -123,6 +118,7 @@ storiesOf("InterviewerListItem", module)
       setInterviewer={(event) => action("setInterviewer")(interviewer.id)}
     />
   ));
+
 storiesOf("InterviewerList", module)
   .addParameters({
     backgrounds: [{ name: "dark", value: "#222f3e", default: true }],
@@ -130,14 +126,14 @@ storiesOf("InterviewerList", module)
   .add("Initial", () => (
     <InterviewerList
       interviewers={interviewers}
-      setInterviewer={action("setInterviewer")}
+      onChange={action("onChange")}
     />
   ))
   .add("Preselected", () => (
     <InterviewerList
       interviewers={interviewers}
       interviewer={3}
-      setInterviewer={action("setInterviewer")}
+      onChange={action("onChange")}
     />
   ));
 
@@ -167,7 +163,7 @@ storiesOf("Appointment", module)
   .add("Status", () => <Status message="Deleting" />)
   .add("Error", () => (
     <Error
-      message="Could not delete appointment."
+      message="Could Not Delete This Appointment!!"
       onClose={action("onClose")}
     />
   ))
@@ -180,6 +176,7 @@ storiesOf("Appointment", module)
       onSave={action("onSave")}
     />
   ))
+  
   .add("Create Form ", () => (
     <Form
       interviewers={interviewers}
@@ -187,6 +184,7 @@ storiesOf("Appointment", module)
       onSave={action("onSave")}
     />
   ))
+  
   .add("Appointment Empty", () => (
     <Fragment>
       <Appointment id={1} time="12pm" />
