@@ -36,7 +36,7 @@ export default function Form(props) {
             type="text"
             value={name}
             placeholder="Enter Student Name"
-            data-testid="student-name-input"
+            stdId="student-name-input"
           />
         </form>
         <section className="appointment__validation">{error}</section>
