@@ -1,4 +1,4 @@
-//fake data for mock jest test
+//Fake data for mock jest test
 const fixtures = {
   days: [
     {
@@ -17,36 +17,36 @@ const fixtures = {
     },
   ],
   appointments: {
-    "1": { id: 1, time: "12pm", interview: null },
-    "2": {
+    1: { id: 1, time: "12pm", interview: null },
+    2: {
       id: 2,
       time: "1pm",
       interview: { student: "Archie Cohen", interviewer: 2 },
     },
-    "3": {
+    3: {
       id: 3,
       time: "2pm",
       interview: { student: "Leopold Silvers", interviewer: 4 },
     },
-    "4": { id: 4, time: "3pm", interview: null },
+    4: { id: 4, time: "3pm", interview: null },
   },
   interviewers: {
-    "1": {
+    1: {
       id: 1,
       name: "Sylvia Palmer",
       avatar: "https://i.imgur.com/LpaY82x.png",
     },
-    "2": {
+    2: {
       id: 2,
       name: "Tori Malcolm",
       avatar: "https://i.imgur.com/Nmx0Qxo.png",
     },
-    "3": {
+    3: {
       id: 3,
       name: "Mildred Nazir",
       avatar: "https://i.imgur.com/T2WwVfS.png",
     },
-    "4": {
+    4: {
       id: 4,
       name: "Cohana Roy",
       avatar: "https://i.imgur.com/FK8V841.jpg",
@@ -54,7 +54,7 @@ const fixtures = {
   },
 };
 
-//mock test for http requests
+//Mock test for http requests
 export default {
   defaults: { baseURL: "http://localhost:8001" },
 

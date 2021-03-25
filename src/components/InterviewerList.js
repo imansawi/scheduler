@@ -3,7 +3,8 @@ import "components/InterviewerList.scss";
 import InterviewerListItem from "components/InterviewerListItem";
 import PropTypes from "prop-types";
 
-
+//Component to show the list of the interviewers with their details
+// while creating/editing appointment
 export default function InterviewerList(props) {
   const { interviewers, value, onChange } = props;
   const currentlyInterviewers = interviewers.map((anInterviewer) => (
@@ -23,7 +24,5 @@ export default function InterviewerList(props) {
 }
 
 InterviewerList.propTypes = {
-  interviewers: PropTypes.array.isRequired
+  interviewers: PropTypes.array.isRequired,
 };
-
-

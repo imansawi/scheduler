@@ -2,6 +2,7 @@ import React from "react";
 import "./InterviewerListItem.scss";
 import classNames from "classnames";
 
+//Component to show the details of the interviewer (name and image)
 export default function InterviewerListItem(props) {
   const interviewerClass = classNames("interviewers__item", {
     "interviewers__item--selected": props.selected,
@@ -17,4 +18,4 @@ export default function InterviewerListItem(props) {
       {props.selected && props.name}
     </li>
   );
-}
+};

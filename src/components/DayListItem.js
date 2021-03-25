@@ -2,6 +2,7 @@ import React from "react";
 import "components/DayListItem.scss";
 import classNames from "classnames";
 
+//Component to show a day details withthe remaining spots available
 export default function DayListItem(props) {
   const formatSpots = function (spotsNumber) {
     if (spotsNumber === 0) return "No Spots ";
@@ -16,9 +17,11 @@ export default function DayListItem(props) {
   );
 
   return (
-    <li data-testid="day"
+    <li
+      data-testid="day"
       className={DayList}
-      onClick={() => props.setDay(props.name)}>
+      onClick={() => props.setDay(props.name)}
+    >
       <h2>{props.name}</h2>
       <h3>{formatSpots(props.spots)} Remaining!</h3>
     </li>

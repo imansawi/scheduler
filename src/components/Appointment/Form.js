@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Button from "components/Button";
 import InterviewerList from "components/InterviewerList";
 
+//Component shows a form to edit a booked appointment/ to create a new appointment
 export default function Form(props) {
   const [interviewer, setInterviewer] = useState(props.interviewer || null);
   const [name, setName] = useState(props.name || "");
@@ -58,4 +59,4 @@ export default function Form(props) {
       </section>
     </main>
   );
-}
+};

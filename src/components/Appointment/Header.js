@@ -1,5 +1,6 @@
 import React from "react";
 
+//Component shows the time of each appointment with a horizantal separator
 export default function Appointment(props) {
   return (
     <header className="appointment__time">
@@ -7,4 +8,4 @@ export default function Appointment(props) {
       <hr className="appointment__separator" />
     </header>
   );
-}
+};

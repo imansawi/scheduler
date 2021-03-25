@@ -19,6 +19,7 @@ import Status from "components/Appointment/Status";
 import Confirm from "components/Appointment/Confirm";
 import Error from "components/Appointment/Error";
 
+//Fake data for the storybook
 const days = [
   {
     id: 1,
@@ -162,10 +163,7 @@ storiesOf("Appointment", module)
   ))
   .add("Status", () => <Status message="Deleting" />)
   .add("Error", () => (
-    <Error
-      message="Could not delete appointment"
-      onClose={action("onClose")}
-    />
+    <Error message="Could not delete appointment" onClose={action("onClose")} />
   ))
   .add("Edit Form ", () => (
     <Form
@@ -176,7 +174,7 @@ storiesOf("Appointment", module)
       onSave={action("onSave")}
     />
   ))
-  
+
   .add("Create Form ", () => (
     <Form
       interviewers={interviewers}
@@ -184,7 +182,7 @@ storiesOf("Appointment", module)
       onSave={action("onSave")}
     />
   ))
-  
+
   .add("Appointment Empty", () => (
     <Fragment>
       <Appointment id={1} time="12pm" />

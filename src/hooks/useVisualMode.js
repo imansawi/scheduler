@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+// A custom hook handles the transition forward/back/replace to different modes of the appointment
+// and to set history of the mode
 export default function useVisualMode(initial) {
   const [mode, setMode] = useState(initial);
   const [history, setHistory] = useState([initial]);
@@ -24,4 +26,4 @@ export default function useVisualMode(initial) {
   }
 
   return { mode, transition, back };
-}
+};
