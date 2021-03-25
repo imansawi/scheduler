@@ -50,6 +50,6 @@ npm run cypress (from scheduler root directory)
 ## Screenshots
 
 !["screenshot of scheduler home page"](https://github.com/imansawi/scheduler/blob/master/public/images/scheduler-home-page.png)
-!["screenshot of create an appointment"](https://github.com/imansawi/scheduler/blob/master/public/images/create-appointment)
-!["screenshot of edit an appointment"](https://github.com/imansawi/scheduler/blob/master/public/images/edit-appointment)
-!["screenshot of delete an appointment"](https://github.com/imansawi/scheduler/blob/master/public/images/delete-appointment)
+!["screenshot of create an appointment"](https://github.com/imansawi/scheduler/blob/master/public/images/create-appointment.png)
+!["screenshot of edit an appointment"](https://github.com/imansawi/scheduler/blob/master/public/images/edit-appointment.png)
+!["screenshot of delete an appointment"](https://github.com/imansawi/scheduler/blob/master/public/images/delete-appointment.png)
