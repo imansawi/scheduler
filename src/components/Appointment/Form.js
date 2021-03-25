@@ -18,7 +18,7 @@ export default function Form(props) {
 
   const validate = function () {
     if (name === "") {
-      setError("Error!! Name Cannot be Blank!");
+      setError("student name cannot be blank");
       return;
     }
     setError("");
@@ -36,7 +36,7 @@ export default function Form(props) {
             type="text"
             value={name}
             placeholder="Enter Student Name"
-            stdId="student-name-input"
+            data-testid="student-name-input"
           />
         </form>
         <section className="appointment__validation">{error}</section>
